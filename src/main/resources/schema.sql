@@ -1,0 +1,11 @@
+CREATE TABLE POKEMON (ID INT PRIMARY KEY,
+                    NAME VARCHAR(25),
+                    TYPE VARCHAR(25) );
+
+CREATE TABLE TRAINER (NAME VARCHAR(25),
+                    LEVEL INT );
+
+CREATE TABLE TRAINER_POKEMONS (TRAINER_NAME VARCHAR(25),
+                    POKEMON_ID INT,
+                    TIMESTAMP INT,
+                    CONSTRAINT composite_key PRIMARY KEY (TRAINER_NAME, POKEMON_ID));
